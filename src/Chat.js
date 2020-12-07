@@ -16,7 +16,7 @@ function Chat({ messages }) {
 
     await axios.post("/messages/new", {
       message: input,
-      name: "aya",
+      name: "Fares",
       timestamp: "new timestamp",
       recieved: false,
     });
@@ -46,9 +46,7 @@ function Chat({ messages }) {
         {messages.map((message) => {
           return (
             <p
-              className={`chat__message  ${
-                message.recieved && "chat__reciever"
-              }`}
+              className={`chat__message  ${message.recieved && "chat__reciever"}`}
             >
               <span className="chat__name">{message.name}</span>
               {message.message}
